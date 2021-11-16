@@ -1,0 +1,133 @@
+body {
+    margin: 4%;
+    background-color: rgb(44, 43, 43);
+    color: rgb(236, 229, 229);
+}
+
+header, nav, h1, footer {
+    background: linear-gradient(0.25turn, #770d1b,#290101);
+    border-radius: 10px;
+}
+
+header, footer {
+    border-radius: 10px;
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+
+nav a{
+    background-color: #770d1b
+}
+
+h1 {
+    font-size: 150%;
+    text-align: center;
+}
+
+nav{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Times New Roman", Arial, serif;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+nav a {
+    border-style: solid;
+    color: white;
+    border-color: #dd1313;
+    background-color: #b3b3b3;
+    border-width: thin;
+    text-decoration: none;
+    margin-right: -4px;
+    padding: 5px;
+}
+
+a:link {
+    color: #ffffff
+}
+
+a:visited {
+    background: #b3b3b3;
+    color:rgb(129, 127, 131)   
+}
+a:hover {
+    background: #ffffff;
+    color: #0006CC;
+}
+
+ section {
+    height: 200px;
+    margin: 10px -2px;
+    padding: 3% 5%;
+    background-color: rgb(44, 43, 43);
+    color: rgb(236, 229, 229);
+    border-style: solid;
+    border-radius: 25px;
+    border-width:thin;
+    border-color: #FFFFFF;
+} 
+
+.half {
+    float: left;
+    width: 40%;
+}
+
+.whole {
+    clear: both;
+}
+
+ul {
+    list-style-type: upper-alpha;
+}
+
+
+progress {
+    -webkit-appearance: none;
+    border: 0;
+    height: 10px;
+    border-radius: 5px;
+}
+  
+progress::-webkit-progress-bar {
+    background-color: #808080;
+    border: 0;
+    height: 10px;
+    border-radius: 5px;
+}
+progress::-webkit-progress-value {
+    background-color: #850303;
+    border: 0;
+    height: 10px;
+    border-radius: 5px;
+}
+
+progress::-moz-progress-bar{
+    background-color: #850303;
+    border: 0;
+    height: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+.childhood-summary {
+    font-variant: small-caps;
+    font-size: 125%;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+.childhood-details {
+    font-variant: small-caps;
+    font-size: 100%;
+    font-style: italic;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+    width: 10%;
+}
