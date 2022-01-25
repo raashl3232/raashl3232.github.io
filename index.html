@@ -1,36 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Ultimate Frisbee - Home</title>
-	<link rel="stylesheet" href="css/hw1.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Webster UCC Home Page</title>
+  <link rel="stylesheet" href="css/uccwebsterhome.css">
+  <link rel="stylesheet" href="css/season.css">
+  <script src="js/season.js"></script>
 </head>
-<body>
-	<header>
-		<h1>Ultimate Frisbee</h1>
-		<nav>
-			<a href="index.html" class = "active">Home</a>
-			<a href="teams.html">Teams</a>
-			<a href="history.html">History</a>
-			<a href="Week1_SimplePage.html" target="_blank">Simple Page</a>
-		</nav>
-	</header>
-		<main>
-			<aside class = "left">
-			<a href="https://commons.wikimedia.org/wiki/File%3AUltimate_Frisbee%2C_Jul_2009_-_17.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Ultimate_Frisbee%2C_Jul_2009_-_19.jpg" alt="Creative Common Ultimate Photo" title="By Ed Yourdon [CC BY-SA 2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons"/> </a>
 
-			<a href="https://commons.wikimedia.org/wiki/File%3AUltimate_Frisbee_Colorado_Cup_2005.jpg"><img alt="Ultimate Frisbee Colorado Cup 2005" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Ultimate_Frisbee_Colorado_Cup_2005.jpg/512px-Ultimate_Frisbee_Colorado_Cup_2005.jpg"/></a>
-
-
-			<a href="https://www.flickr.com/photos/paradisecoastie/15409853738/" title="Ultimate Frisbee"><img src="https://farm4.staticflickr.com/3948/15409853738_7dbfbfbac7_k.jpg"  alt="Ultimate Frisbee"></a>
-		</aside>
-			<section class = "right">
-				<h2>Watch your Head </h2>
-			<p>Ultimate Frisbee is a sport that I never played myself, but its popularity is something hard to ignore in many Midwestern college towns.  Students (and people who wish they were still students) spend the few briefs months of good weather, sprinting down fields, hurling frisbees, and yelling "Stack!!".</p>
-			<p>What I find much more entertaining is the large number of people who continue to play when the weather gets windy and the night sky darkens around oh....4:15pm.  The sight of frisbees boomeranging in the wind is topped only by the knowledge that even when you can't see them, those same plastic discs of death are probably hurtling through the dark night sky at 8 or 9 o'clock in the evening.
-			</p>
-			<p>Ultimate Frisbee requires a great deal of stamina and dexterity.  Not surprisingly, the <abbr title = "International Olympic Committee">IOC</abbr> officially recognized Ultimate as a sport in 2015.   It can go up against other sports for inclusion in  Olympic games.</p>
-	</section>
-</main>
+<body onload="load_custom_content()">
+  <header>
+    <h1>UCC Webster</h1>
+    <div class="collapsible-menu light">
+      <label for="menu">Menu</label>
+      <input type="checkbox" id="menu">
+      <div class="menu-content">
+        <ul>
+          <li><a class="active" href="#">Welcome</a></li>
+          <li><a class="dark" href="bookstudy.html">Study Group</a></li>
+          <li><a href="events.html" class="dark">Events</a></li>
+          <li><a href="season.html" class="dark">Season</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="activities"> </div>
+  </header>
+  <section>
+    <h2>Sunday Streaming Links:</h2>
+    <div class="outline" id="streamlinks">
+      <a class="dark" href="#">Go To Facebook Livestream</a>
+      <a class="dark" href="#">Go To Youtube Channel</a>
+      <a class="dark" href="#">Download Sunday Bulletin</a>
+    </div>
+  </section>
+  <section>
+    <h2>At Webster UCC:</h2>
+    <div class="triple">
+      <h3>We Welcome</h3>
+      <div>
+        “No matter who you are, or where you are on life’s journey, you are welcome here”.
+        That’s how we begin each service, and how we live. It means everyone is equally
+        invited to fully participate in the life of the church.
+      </div>
+    </div>
+    <div class="triple">
+      <h3>We Explore</h3>
+      <div>
+        We don’t profess to have all the answers. In fact, we encourage questioning.
+        We cherish and respect the diversity of beliefs that enrich our life together.
+        We are united, not by a common doctrine or creed, but by a commitment to living
+        a life of love, compassion, and inclusion as taught by Jesus.
+      </div>
+    </div>
+    <div class="triple">
+      <h3>We Act</h3>
+      <div>
+        We are a hands-on, “get-it-done” church. While Sunday worship is an important part
+        of our community, the real passion in our church is in our service to others. Our
+        ministries are as varied as the needs within our world.
+      </div>
+    </div>
+  </section>
+  <section id="schedule">
+    <h2 id="schedule_header">Pandemic Worship Schedule:</h2>
+    <div class="outline">
+      <h3>Sundays</h3>
+      <ul id="sundayschedule">
+        <li id="wor_sunday">
+          10:00 AM Combined worship in our sanctuary or on the lawn.
+          <span id="masks">We request that masks be worn inside.</span>
+        </li>
+        <li id="school_sunday">10:00 AM Sunday School in the woods!</li>
+        <li id="youth_sunday">11:00 AM Youth Group</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div class="outline">
+      <h3>All Are Welcome Here</h3>
+      <div>
+        As an Open and Affirming congregation, Webster UCC has embraced the vision of being a
+        welcoming, Christ-centered community where all of God’s people are valued, supported
+        and challenged to grow in faith and service. <br/> <br/> For us “all” truly means ALL. We feel
+        you shouldn’t have to do any detective work to find out whether you will be welcome
+        here. You are. Period. LGBTQ+? Yes. Person of Color? Yes. Living with a mental
+        illness? Yes. Strong in your beliefs? Yes. Not sure what you believe? Yes. We
+        are proud of the UCC’s inclusive tradition, and are committed to upholding that
+        tradition. <br/> <br/> This affirmation extends not only to our programs and services, but also
+        to sacraments, lay leadership positions, and the hiring of our staff, including clergy.
+        You can read our inclusion statements <a href="#">here</a>.
+      </div>
+    </div>
+  </section>
+  <footer>
+    <h3>Webster UCC</h3>
+    <div>
+      570 Klem Road<br />
+      Webster, NY 14580<br />
+      1-585-671-3757<br />
+      office@uccwebster.org
+    </div>
+    <a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons">Hamburger icons created by Pixel
+      perfect - Flaticon</a>
+  </footer>
 </body>
+
 </html>

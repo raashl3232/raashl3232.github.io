@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Webster UCC Study Group</title>
+  <link rel="stylesheet" href="css/uccwebsterhome.css">
+  <link rel="stylesheet" href="css/season.css">
+  <script src="js/season.js"></script> 
+</head>
+
+<body onload="load_custom_content()">
+  <header>
+    <h1>UCC Webster Seasons</h1>
+    <div class="collapsible-menu light">
+      <label for="menu">Menu</label>
+      <input type="checkbox" id="menu">
+      <div class="menu-content">
+        <ul>
+          <li><a href="uccwebsterhome.html" class="dark">Welcome</a></li>
+          <li><a href="bookstudy.html" class="dark">Study Group</a></li>
+          <li><a href="events.html" class="dark">Events</a></li>
+          <li><a href="season.html" class="active">Season</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="activities"> </div>
+  </header>
+  <section>
+    <h2 id="color_settings"></h2>
+    <div class="outline double modify">
+      <h3>Liturigal Season</h3>
+      <div class="select">
+        <input type="radio" id="default" name="lit_season" value="Default" checked="checked">
+        <label for="default">Default</label><br>
+        <input type="radio" id="advent" name="lit_season" value="Advent">
+        <label for="advent">Advent</label><br>
+        <input type="radio" id="after_eph" name="lit_season" value="After_Eph">
+        <label for="after_eph">After Ephphany</label><br>
+        <input type="radio" id="lent" name="lit_season" value="Lent">
+        <label for="lent">Lent</label><br>
+        <input type="radio" id="holy_week" name="lit_season" value="Holy_Week">
+        <label for="holy_week">Holy Week</label><br>
+        <input type="radio" id="pentecost" name="lit_season" value="Pentecost">
+        <label for="pentecost">Pentecost</label><br>
+        <input type="radio" id="after_pent" name="lit_season" value="After_Pent">
+        <label for="after_pent">After Pentecost</label>
+      </div>
+      <div class="modify">
+        <button type="button" class="dark" onclick="apply_current_litseason()">Apply</button>
+        <button type="button" class="dark" onclick="save_current_litseason()">Save</button>
+      </div>
+    </div>
+    <div class="outline double modify">
+      <h3>Worship Season</h3>
+      <div class="select">
+        <input type="radio" id="fall_summer_spring" name="wor_season" value="Fall_Winter_Spring">
+        <label for="fall_winter_spring">Fall/Winter/Spring</label><br>
+        <input type="radio" id="summer" name="wor_season" value="Summer">
+        <label for="summer">Summer</label><br>
+        <input type="radio" id="pandemic" name="wor_season" checked="checked" value="Pandemic">
+        <label for="pandemic">Pandemic</label>        
+      </div>
+      <div class="modify">
+        <button type="button" class="dark" onclick="apply_current_season()">Apply</button>
+        <button type="button" class="dark" onclick="save_current_season()">Save</button>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <h3>Webster UCC</h3>
+    <div>
+      570 Klem Road<br/>
+      Webster, NY 14580<br/>
+      1-585-671-3757<br/>
+      office@uccwebster.org
+    </div>
+    <a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons">Hamburger icons created by Pixel
+      perfect - Flaticon</a>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+body{
+    padding-top: 40px;
+}
+
+h1, h2, h3 {
+    color: rgb(0,0,0);
+    text-align: center;
+}
+
+h3 {
+  text-decoration: underline;  
+}
+
+.activities{
+    background-image: 
+    url(../img/IMAG0001.jpg),
+    url(../img/IMAG0080.jpg),
+    url(../img/IMAG0081.jpg),
+    url(../img/weir.jpg);
+    width: 35%;
+    height: 10rem;
+    margin: 0 auto;
+    background-size: 25%, 25%, 25%, 30%;
+    background-position: left, 33%, 66%, right;
+    background-repeat: no-repeat;
+    padding: 0 25% 0 25%;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.collapsible-menu {
+    padding: 0 25% 0 25%;
+    margin: 3% 0;
+    border: 2px solid rgb(0, 0, 0);
+    border-bottom: 3px solid rgb(0,0,0);
+    border-radius: 5px;
+}
+
+.collapsible-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.collapsible-menu li{
+    width: 95%;
+    text-align: center;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 3px -3px 3px -3px;
+}
+
+.collapsible-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.active{
+    background-color: rgb(200, 200, 200);
+    border-radius: 5px;
+}
+
+.collapsible-menu label {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 25px;
+    display: block;
+    cursor: pointer;
+    background: url("../img/hamburger.png") no-repeat left center;
+    background-size: 40px;
+    padding: 10px 0 10px 50px;
+}
+
+.menu-content {
+    max-height: 0;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif; 
+    padding: 0 0 0 50px;
+}
+
+/* Toggle Effect */
+input:checked ~ label {
+    background-image: url(close.png);
+}
+input:checked ~ .menu-content {
+    max-height: 100%;
+}
+
+input#menu {
+    display: none;
+}
+
+.triple, .outline {
+    text-align: center;
+    display: block;
+    color: rgb(0,0,0);
+    padding: 1%;
+    margin: 3% 8%;
+    text-decoration: none;
+    border: solid thin rgb(0,0,0);
+    border-radius: 20px;
+}
+
+.triple a, #streamlinks a, #zoomlink a {
+    text-align: center;
+    display: block;
+    padding:5%;
+    margin: 3% 30% 5% 30%;
+    text-decoration: none;
+    font-weight: bold;
+    border: solid 3px rgb(0,0,0);
+    border-radius: 25px;
+}
+
+#zoomlink a{
+    font-size: 2.5vw;
+}
+
+.triple a {
+    margin: 10% 5% 5% 5%;
+}
+
+#sundayschedule, #schedule h3, #schedule ul li{
+    text-align: left;
+    padding: 0 3% 2% 5%;
+}
+
+#masks{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.resourcelist table {
+    font-family: Calibri, Helvetica, sans-serif;
+    font-size: 1.8vw;
+    text-align: center;
+    width: 100%;
+    padding: 0% 10%;
+}
+
+.resourcelist table tr th {
+    color: #000000;
+    padding: 1.6% 2%;
+    border-radius: 5px 5px 0 0;
+    font-style: bold;
+    border-style: solid;
+    border-width: 1px 1px 3px 1px;
+    border-color: rgb(50, 50, 50);
+}
+
+.resourcelist table tr td {
+    background-color:rgba(212, 229, 192, 0.705);
+    padding: 1.6% 2%;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.resourcelist table tr:hover {
+    background-color:rgba(212, 229, 192, 0.9);
+
+}
+
+.resourcelist table tr th:first-child{
+    width: 10%;
+    text-align: left;
+}
+
+.resourcelist table tr td:first-child{
+    width: 10%;
+    text-align: left;
+}
+
+.resourcelist table tr th:fourth-child{
+    width: 20%;
+    text-align: left;
+}
+
+.resourcelist table tr td:fourth-child{
+    width: 20%;
+    text-align: left;
+}
+
+.eventscal {
+    width: 84%;
+    margin: 0 auto;
+}
+
+.calendar {
+    border: none;
+    width: 100%;
+    height: 400px;
+}
+
+.select, .modify h3 {
+    font-size: 1.2rem;
+}
+
+.select {
+    text-align: left;
+}
+
+.modify {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.modify button {
+    margin: 8% 4%;
+    padding: 4%;
+    border: solid 3px #000000;
+    border-radius: 10px;
+    font-size: 1.0rem;
+    font-style: bold;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    .collapsible-menu {
+        padding: 1% 2% 2% 2%;
+        margin: 3% 8%;
+    }
+
+    .collapsible-menu li{
+        margin: 0 2%;
+        width: 19%;
+        float: left;
+    }
+
+    input#menu, .collapsible-menu label{
+        display: none;
+    }
+    
+    .menu-content {
+        max-height: 100%;
+        font-family: 'Oswald', sans-serif; 
+    }
+
+    #streamlinks {
+        margin: 0% 8% 5% 8%;
+        width: 84%;
+        padding: 2% 0 10% 0;
+    }
+
+    #streamlinks a {
+        float: left;
+        width: 18vw;
+        padding: 1vw;
+        margin: 1vw 0vw 4vw 5vw;
+        font-size: 1.5vw;
+        border: solid 3px rgb(0,0,0);
+        border-radius: 20px;
+    }
+
+    .outline{
+        font-size: 1.4vw;
+    }
+
+    .triple{
+        float: left;
+        width: 18.5%;
+        padding: 2%;
+        margin: 0 0 5% 8%;
+    }
+
+    .double {
+        float: left;
+        width: 34%;
+        padding: 0 2% 2% 2%;
+        margin: 2% 0 5% 8%;
+    }
+
+    .resourcelist table {
+        font-size: 1.5vw;
+    }
+    
+    #schedule, #resource{
+        clear: both;
+    }
+
+    #worship{
+        padding: 0 2% 0 2%;
+        margin: 0 20% 3% 20%;
+    }
+
+    #sundayschedule {
+        text-align: left;
+        padding: 0 0 2vw 3vw;
+    }
+
+    .eventscal {
+        clear: both;
+    }
+
+    .calendar {
+        height: 800px;
+    }
+
+    .modify button {
+        float: left;
+    }
+}
