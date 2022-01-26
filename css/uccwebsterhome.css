@@ -273,6 +273,16 @@ footer {
         margin: 2% 0 5% 8%;
     }
 
+    #zoomlink {
+        margin: 0 20% 0 20%;
+    }
+
+    #zoomlink a{
+    padding:2%;
+    margin: 3% 35% 5% 35%;
+    font-size: 1.8vw;
+}
+
     .resourcelist table {
         font-size: 1.5vw;
     }
