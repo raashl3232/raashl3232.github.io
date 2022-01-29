@@ -2,23 +2,18 @@
 :root {
     --light: rgb(255, 255, 255);
     --dark: rgb(255, 255, 255);
-    --text: rgb(0, 0, 0);
+    --lighttext: rgb(0, 0, 0);
+    --darktext: rgb(0,0,0);
 }
 
-/* ADVENT */
-/* :root {
-    --light: rgb(200, 0, 200); 
-    --dark: rgb(7, 42, 108);
-    --text: rgb(200, 200, 100);    
-} */
-
- .dark{
-    color: var(--text);
+.dark{
     background-color: var(--dark);
+    color: var(--darktext);
 }
 
 .light{
     background-color: var(--light);
+    color: var(--lighttext);
 }
 
 body{
@@ -30,4 +25,5 @@ body{
         var(--light) 90%,
         var(--dark) 100%
     );
+    color: var(--lighttext);
 }

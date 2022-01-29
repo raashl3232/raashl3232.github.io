@@ -13,50 +13,65 @@ function get_background_colors(){
         case "Advent":
             background.season = "Advent";
             background.dark = "rgb(7, 42, 108)"; //deep blue
-            background.light = "rgb(200, 0, 200)"; //purple
+            background.light = "#d0fefe"; //pale blue
             background.darkname = "Deep Blue";
-            background.lightname = "Purple";
-            background.text = "rgb(200, 200, 100)";
+            background.lightname = "Pale Blue";
+            background.darktext = "#e1e1dd";
+            background.lighttext = "rgb(50, 50, 50)";
             break;
-        case "After_Eph":
-            background.season = "After Ephiphany";
+        case "Christmas":
+            background.season = "Christmas";
+            background.dark = "rgb(50, 0, 0)"; // dark red
+            background.light = "#fdfff5"; // milk
+            background.darkname = "Dark Red";
+            background.lightname = "Milk";
+            background.darktext = "rgb(255, 255, 255)";
+            background.lighttext = "rgb(50, 50, 50)";
+            break;
+        case "Epiphany":
+            background.season = "Epiphany";
             background.dark = "rgb(19, 179, 4)"; // dark green
             background.light = "rgb(109, 163, 104)"; // light green
             background.darkname = "Dark Green";
             background.lightname = "Light Green";
-            background.text = "rgb(200, 200, 200)";
+            background.darktext = "rgb(200, 200, 200)";
+            background.lighttext = "rgb(0, 0, 0)";
             break;
         case "Lent":
             background.season = "Lent";
-            background.dark = "rgb(102, 66, 40)"; // brown
-            background.light = "rgb(245, 245, 220)"; // beige
-            background.darkname = "Brown";
-            background.lightname = "Beige";
-            background.text = "#FFFFFF";
+            background.dark = "rgb(100, 0, 100)"; // dark purple
+            background.light = "rgb(220, 0, 200)"; // light purple
+            background.darkname = "Dark Purple";
+            background.lightname = "Light Purple"
+            background.darktext = "#FFFFFF";
+            background.lighttext = "#FFFFFF";
             break;
-        case "Holy_Week":
-            background.season = "Holy Week";
-            background.dark = "rgb(10, 10, 10)"; // almost black
-            background.light = "rgb(150, 0, 0)"; // red
-            background.darkname = "Black";
-            background.lightname = "Red";
-            background.text = "rgb(200, 200, 200)";
+        case "Easter":
+            background.season = "Easter";
+            background.dark = "rgb(243, 229, 171)"; // vanilla
+            background.light = "rgb(245, 245, 220)"; // beige
+            background.darkname = "Vanilla";
+            background.lightname = "Beige";
+            background.darktext = "rgb(0, 0, 0)";
+            background.lighttext = "rgb(50, 50, 50)";
             break;
         case "Pentecost":
             background.season = "Pentecost";
-            background.dark = "rgb(255, 215, 0)"; // gold
-            background.light = "rgb(243, 229, 171)"; // vanilla
-            background.darkname = "Gold";
-            background.lightname = "Vanilla";
-            background.text = "#000000";
+            background.dark = "rgb(50, 0, 0)"; // dark red
+            background.light = "rgb(200, 0, 0)"; // light red
+            background.darkname = "Dark Red";
+            background.lightname = "Light Red";
+            background.darktext = "#FFFFFF";
+            background.lighttext = "#FFFFFF";
             break;
-        case "After_Pent":
-            background.season = "After Pentecost";
+        case "Common_Time":
+            background.season = "Common Time";
             background.dark = "rgb(19, 179, 4)"; // dark green
             background.light = "rgb(109, 163, 104)"; // light green
             background.darkname = "Dark Green";
             background.lightname = "Light Green";
-            background.text = "rgb(200, 200, 200)";
+            background.darktext = "rgb(200, 200, 200)";
+            background.lighttext = "rgb(0, 0, 0)";
             break;
         default: 
             background.season = "Default";
@@ -64,7 +79,8 @@ function get_background_colors(){
             background.light = "rgb(255, 255, 255)"; // white
             background.darkname = "White";
             background.lightname = "White";
-            background.text = "#000000";
+            background.darktext = "#000000";
+            background.lighttext = "#000000";
     }
     return background;
 }
@@ -73,22 +89,25 @@ function applystyle(season, type){
     var darkElements = document.getElementsByClassName(type);
     for ( e=0; e < darkElements.length; e++ ) {
         element = darkElements[e];
-        if( type == "light")
+        if( type == "light"){
             darkElements[e].style.backgroundColor = background.light;
+            darkElements[e].style.color = background.lighttext;
+        }
         else if( type == "dark"){
             darkElements[e].style.backgroundColor = background.dark;
-            darkElements[e].style.color = background.text;
+            darkElements[e].style.color = background.darktext;
         }
     }
 }
 
 function applyLightDark(season){
     document.getElementById("color_settings").innerHTML = background.season + 
-        " colors are: " + background.darkname + " and " + background.lightname;
+        " color theme is: " + background.darkname + " and " + background.lightname;
         var root = document.querySelector(":root");
         root.style.setProperty('--dark', season.dark);
         root.style.setProperty('--light', season.light);
-        root.style.setProperty('--text', season.text); 
+        root.style.setProperty('--darktext', season.darktext); 
+        root.style.setProperty('--lighttext', season.lighttext);
 }
 
 function apply_current_litseason(){
@@ -116,7 +135,8 @@ function load_custom_content(){
     set_radio_box('wor_season', 'wor_season');
     console.log("Setting: dark = " + localStorage.getItem("dark"));
     console.log("Setting: light = " + localStorage.getItem("light"));
-    console.log("Setting: text = " + localStorage.getItem("text"));
+    console.log("Setting: darktext = " + localStorage.getItem("darktext"));
+    console.log("Setting: lighttext = " + localStorage.getItem("lighttext"));
     var root = document.querySelector(":root");
 
     if(localStorage.getItem("dark") != null){
@@ -128,7 +148,11 @@ function load_custom_content(){
     }
 
     if(localStorage.getItem("dark") != null){
-        root.style.setProperty("--text", localStorage.getItem("text"));
+        root.style.setProperty("--darktext", localStorage.getItem("darktext"));
+    }
+
+    if(localStorage.getItem("dark") != null){
+        root.style.setProperty("--lighttext", localStorage.getItem("lighttext"));
     }
     //
     // Set custom worship schedule
@@ -166,7 +190,8 @@ function save_current_litseason(){
     background = get_background_colors();
     localStorage.setItem('dark', background.dark);
     localStorage.setItem('light', background.light);
-    localStorage.setItem('text', background.text);
+    localStorage.setItem('darktext', background.darktext);
+    localStorage.setItem('lighttext', background.lighttext);
     console.log("Exit save_current_litseason");
 }
 

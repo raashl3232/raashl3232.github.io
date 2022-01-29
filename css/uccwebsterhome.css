@@ -3,7 +3,6 @@ body{
 }
 
 h1, h2, h3 {
-    color: rgb(0,0,0);
     text-align: center;
 }
 
@@ -58,6 +57,7 @@ h3 {
 
 .active{
     background-color: rgb(200, 200, 200);
+    color:rgb(0, 0, 0);
     border-radius: 5px;
 }
 
@@ -93,7 +93,6 @@ input#menu {
 .triple, .outline {
     text-align: center;
     display: block;
-    color: rgb(0,0,0);
     padding: 1%;
     margin: 3% 8%;
     text-decoration: none;
@@ -139,7 +138,6 @@ input#menu {
 }
 
 .resourcelist table tr th {
-    color: #000000;
     padding: 1.6% 2%;
     border-radius: 5px 5px 0 0;
     font-style: bold;
@@ -150,6 +148,7 @@ input#menu {
 
 .resourcelist table tr td {
     background-color:rgba(212, 229, 192, 0.705);
+    color: #000000;
     padding: 1.6% 2%;
     text-decoration: none;
     font-style: italic;
