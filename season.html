@@ -31,13 +31,13 @@
     <h2 id="color_settings">If you Apply a Season setting, this heading will change</h2>
     <div class="outline double modify">
       <h3>Liturigal Season</h3>
-      <div class="select">
+      <fieldset class="select">
         <input type="radio" id="default" name="lit_season" value="Default" checked="checked">
         <label for="default">Default</label><br>
         <input type="radio" id="advent" name="lit_season" value="Advent">
         <label for="advent">Advent</label><br>
         <input type="radio" id="christmas" name="lit_season" value="Christmas">
-        <label for="advent">Christmas</label><br>
+        <label for="christmas">Christmas</label><br>
         <input type="radio" id="epiphany" name="lit_season" value="Epiphany">
         <label for="epiphany">Epiphany</label><br>
         <input type="radio" id="lent" name="lit_season" value="Lent">
@@ -48,7 +48,7 @@
         <label for="pentecost">Pentecost</label><br>
         <input type="radio" id="common_time" name="lit_season" value="Common_Time">
         <label for="common_time">Common Time</label>
-      </div>
+      </fieldset>
       <div class="modify">
         <button type="button" class="dark" onclick="apply_current_litseason()">Apply</button>
         <button type="button" class="dark" onclick="save_current_litseason()">Save</button>
@@ -56,14 +56,14 @@
     </div>
     <div class="outline double modify">
       <h3>Worship Season</h3>
-      <div class="select">
+      <fieldset class="select">
         <input type="radio" id="fall_winter_spring" name="wor_season" value="Fall_Winter_Spring">
         <label for="fall_winter_spring">Fall/Winter/Spring</label><br>
         <input type="radio" id="summer" name="wor_season" value="Summer">
         <label for="summer">Summer</label><br>
         <input type="radio" id="pandemic" name="wor_season" checked="checked" value="Pandemic">
         <label for="pandemic">Pandemic</label>        
-      </div>
+      </fieldset>
       <div class="modify">
         <button type="button" class="dark" onclick="apply_current_season()">Apply</button>
         <button type="button" class="dark" onclick="save_current_season()">Save</button>
