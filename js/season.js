@@ -34,7 +34,7 @@ function get_background_colors(){
             background.light = "rgb(109, 163, 104)"; // light green
             background.darkname = "Dark Green";
             background.lightname = "Light Green";
-            background.darktext = "rgb(200, 200, 200)";
+            background.darktext = "rgb(255, 255, 255)";
             background.lighttext = "rgb(0, 0, 0)";
             break;
         case "Lent":
@@ -70,7 +70,7 @@ function get_background_colors(){
             background.light = "rgb(109, 163, 104)"; // light green
             background.darkname = "Dark Green";
             background.lightname = "Light Green";
-            background.darktext = "rgb(200, 200, 200)";
+            background.darktext = "rgb(255, 255, 255)";
             background.lighttext = "rgb(0, 0, 0)";
             break;
         default: 
